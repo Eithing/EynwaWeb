@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - EynwaWeb</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/css/ContextSelector/style.css" rel="stylesheet" />
+    <style>
+        body {
+            background-image: url('ressources/contextselector/background.jpg');
+        }
+    </style>
+</head>
+<body>
+        <section class="hero-section">
+            <ul class="card-grid">
+                @foreach (EynwaWeb.Models.ContextSelector.ContextItem v in Model)
+                {
+                    <li class="card">
+                        <div class="card__background" style="background-image: url(@v.Image)" href="#/ContextSelector/Privacy"></div>
+                        <div class="card__content" href="#/ContextSelector/Privacy">
+                            <p class="card__category" href="#/ContextSelector/Privacy">EYNWA</p>
+                            <h3 class="card__heading" href="#/ContextSelector/Privacy">@v.Title</h3>
+                        </div>
+                    </li>
+                }
+            </ul>
+        </section>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>

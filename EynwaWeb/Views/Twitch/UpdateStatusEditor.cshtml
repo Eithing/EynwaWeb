@@ -1,0 +1,62 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+@*<link rel="stylesheet" href="~/css/Twitch/Twitch.css" />*@
+
+<html>
+<head>
+    <title>Titre du document</title>
+    <style>
+        .box {
+            width: 120px;
+            height: 30px;
+            border: 1px solid #999;
+            font-size: 18px;
+            color: #1c87c9;
+            background-color: #eee;
+            border-radius: 5px;
+            box-shadow: 4px 4px #ccc;
+        }
+
+        #name {
+            margin-top : 30px;
+        }
+
+        #game {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body style="background-color:lightslategrey">
+    <div>
+
+        <select class="box" name="streamer">
+            <option value="">Qui est tu ?</option>
+            <option value="1">Eithing</option>
+            <option value="2">Frieyja</option>
+            <option value="3">Toukan</option>
+        </select>
+    </div>
+
+    <div>
+        <select class="box" id="game">
+            <option>Café</option>
+            <option>Thé</option>
+            <option>Jus</option>
+            <option>Cocktail</option>
+        </select>
+    </div>
+
+
+    <div class="form__group field">
+        <input type="input" class="form__field" placeholder="Titre du stream" name="name" id='name' />
+    </div>
+
+    <button style="margin-top:15px">
+        Valider
+    </button>
+</body>
+</html>
